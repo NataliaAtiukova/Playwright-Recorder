@@ -1,0 +1,170 @@
+:root {
+  --bg: #f3f5f8;
+  --panel: #ffffff;
+  --text: #1a2433;
+  --muted: #65748a;
+  --primary: #1769aa;
+  --danger: #a93030;
+  --border: #d8e0ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "SF Pro Text", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 10%, #dcecff, transparent 40%), var(--bg);
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  margin: 0 0 14px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.checkbox-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+}
+
+input[type="text"],
+input[type="password"] {
+  min-width: 300px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+button {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+.ghost {
+  background: #466286;
+}
+
+.list {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+pre {
+  min-height: 140px;
+  max-height: 300px;
+  overflow: auto;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  background: #0f1722;
+  color: #d9e6ff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.code-editor {
+  width: 100%;
+  min-height: 260px;
+  margin-top: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  background: #0f1722;
+  color: #d9e6ff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.toast-host {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: grid;
+  gap: 8px;
+  z-index: 9999;
+}
+
+.toast {
+  min-width: 280px;
+  max-width: 420px;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: toast-in 0.2s ease;
+}
+
+.toast.ok {
+  background: #1e7f4f;
+}
+
+.toast.err {
+  background: #9f2c2c;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

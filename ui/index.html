@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WinWinBot сценарии</title>
+  <link rel="stylesheet" href="/ui/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>WinWinBot Playwright Recorder</h1>
+
+    <section class="panel">
+      <h2>Новый сценарий (запись)</h2>
+      <div class="row">
+        <input id="recordName" type="text" placeholder="Имя сценария (можно на русском, можно оставить пустым для автоимени)" />
+        <label class="checkbox-row">
+          <input id="autoLoginToggle" type="checkbox" />
+          Автологин перед записью
+        </label>
+        <button id="startRecordBtn">➕ Записать сценарий</button>
+        <button id="stopRecordBtn" class="danger">⏹ Стоп запись</button>
+      </div>
+      <p id="recordStatus" class="muted"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Настройки записи</h2>
+      <div class="row">
+        <input id="startUrlInput" type="text" placeholder="URL страницы после логина" />
+        <input id="emailInput" type="text" placeholder="Email для автологина" />
+        <input id="passwordInput" type="password" placeholder="Пароль для автологина" />
+        <label class="checkbox-row">
+          <input id="defaultAutoLoginToggle" type="checkbox" />
+          Автологин по умолчанию
+        </label>
+        <button id="saveSettingsBtn">Сохранить настройки</button>
+      </div>
+      <p class="muted">Этот URL будет открываться после логина при запуске записи.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Сценарии</h2>
+      <div class="row">
+        <button id="refreshBtn">Обновить список</button>
+        <button id="runSelectedBtn">▶ Запустить выбранные</button>
+      </div>
+      <div id="scriptsList" class="list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Редактор сценария</h2>
+      <p id="editorHint" class="muted">Выберите сценарий и нажмите "Открыть код".</p>
+      <div class="row">
+        <button id="saveScriptBtn">💾 Сохранить код</button>
+      </div>
+      <textarea id="scriptEditor" class="code-editor" spellcheck="false" disabled></textarea>
+    </section>
+
+    <section class="panel">
+      <h2>Лог</h2>
+      <pre id="logBox"></pre>
+    </section>
+  </main>
+  <div id="toastHost" class="toast-host"></div>
+
+  <script src="/ui/app.js"></script>
+</body>
+</html>

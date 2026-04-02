@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# local runtime artifacts
+.tmp/
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,17 @@
+{
+  "chatId": 10,
+  "email": "",
+  "password": "",
+  "events": [
+    "Подписчик впервые запустил бота",
+    "Подписчик запустил бота",
+    "Подписчик отписался",
+    "Изменилось поле профиля подписчика",
+    "Оператор назначен",
+    "Подписка через мини-приложение",
+    "Подписчик заполнил заявку"
+  ],
+  "recordingStartUrl": "https://testing.winwinbot.com/ru/chat/10/automation/schedules/36/messages",
+  "defaultAutoLogin": true,
+  "scenarioTimeoutMs": 180000
+}
