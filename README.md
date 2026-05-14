@@ -1,4 +1,4 @@
-# Playwright-Recorder (Archived)
+# Playwright-Recorder (Legacy)
 
 Этот репозиторий больше не развивается отдельно.
 
